@@ -10,7 +10,7 @@ Overview
 
 The project also includes exploratory data analysis and visualization using Matplotlib and Seaborn.
 
-📌 Project Overview
+📌 #Project Overview
 
 The goal of this project is to build a movie recommendation engine that suggests similar movies based on movie content instead of user ratings.
 
@@ -22,7 +22,7 @@ Cosine Similarity
 
 to calculate similarity between movies.
 
-🛠 Technologies Used
+🛠 #Technologies Used
 Python
 Pandas
 NumPy
@@ -31,14 +31,14 @@ Seaborn
 Scikit-Learn
 NLTK
 Pickle
-📂 Dataset Used
+📂 #Dataset Used
 
 TMDB 5000 Dataset:
 
 tmdb_5000_movies.csv
 tmdb_5000_credits.csv
 
-Dataset contains:
+#Dataset contains:
 
 Movie titles
 Genres
@@ -50,26 +50,26 @@ Ratings
 Popularity
 Revenue
 Budget
-⚙️ Project Workflow
-1. Data Collection
+⚙️# Project Workflow
+#1. Data Collection
 
 Loaded movie and credits datasets using Pandas.
 
 movies = pd.read_csv('tmdb_5000_movies.csv')
 credits = pd.read_csv('tmdb_5000_credits.csv')
-2. Data Merging
+#2. Data Merging
 
 Merged both datasets using the movie title.
 
 movies = movies.merge(credits,on='title')
-3. Data Cleaning
+#3. Data Cleaning
 
 Performed:
 
 Null value handling
 Duplicate removal
 Column filtering
-4. Feature Engineering
+#4. Feature Engineering
 
 Created tags using:
 
@@ -82,29 +82,29 @@ Crew
 Example:
 
 movies['tags'] = movies['overview'] + movies['genres'] + movies['keywords'] + movies['cast'] + movies['crew']
-5. Text Processing
+#5. Text Processing
 
 Applied:
 
 Lowercasing
 Tokenization
 Stemming using PorterStemmer
-6. Vectorization
+#6. Vectorization
 
 Used CountVectorizer to convert text into vectors.
 
 cv = CountVectorizer(max_features=5000, stop_words='english')
-7. Similarity Calculation
+#7. Similarity Calculation
 
 Used cosine similarity to calculate similarity between movies.
 
 similarity = cosine_similarity(vectors)
-8. Recommendation Function
+#8. Recommendation Function
 
 Built a recommendation function that returns top 5 similar movies.
 
 recommend('Avatar')
-📊 Data Visualization
+📊 #Data Visualization
 
 The project includes visualizations using Matplotlib and Seaborn.
 
@@ -129,15 +129,15 @@ Detects outliers in movie tags.
 Shows distribution of similarity scores.
 10. Similarity Decay Line Plot
 Displays decline in similarity scores across ranked movies.
-📈 Libraries Used for Visualization
+📈 #Libraries Used for Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
-🧠 NLP Techniques Used
+🧠 #NLP Techniques Used
 Tokenization
 Stemming
 Vectorization
 Cosine Similarity
-📦 Model Serialization
+📦# Model Serialization
 
 Saved processed data using Pickle.
 
@@ -188,7 +188,7 @@ OTT-Recommendation-System/
 ├── similarity.pkl
 ├── screenshots/
 ├── README.md
-▶️ How to Run
+▶️ #How to Run
 Install dependencies
 pip install pandas numpy matplotlib seaborn scikit-learn nltk
 Run Jupyter Notebook
@@ -203,14 +203,8 @@ Poster Recommendation
 TMDB API Integration
 Hybrid Recommendation System
 User-based collaborative filtering
-🤝 Contributing
 
-Contributions and suggestions are welcome.
 
-📜 License
-
-This project is for educational and learning purposes.
-
-⭐ If you like this project
+⭐# If you like this project
 
 Give it a ⭐ on GitHub.
